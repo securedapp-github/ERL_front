@@ -118,6 +118,7 @@ const Navbar = () => {
           </Link>
         </div>
       )}
+      <div className="bg-zinc-700 w-full h-[1.5px] mt-1"></div>
     </nav>
   );
 };
