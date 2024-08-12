@@ -8,7 +8,7 @@ import { FaFacebookF } from "react-icons/fa";
 export default function Contactus() {
   return (
     <div className="w-full bg-[#021317] py-10 px-2">
-      <p className="text-white text-3xl text-center lg:text-start lg:ml-40 mb-12 lg:mb-0">
+      <p className="text-white text-3xl text-center lg:text-start lg:ml-40 mb-12 lg:mb-0 font-semibold">
         Contact us
       </p>
 

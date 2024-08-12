@@ -12,7 +12,7 @@ export default function Landing() {
         <div className="flex flex-col justify-center items-center gap-3">
           <img src={Logo} alt="Brand Logo" />
           <div className="flex gap-2 justify-center items-center">
-            <p className="text-2xl text-white">E-Riyal </p>
+            <p className="text-2xl text-white">E-Riyal</p>
             <img src={Tick} alt="" />
           </div>
         </div>
@@ -123,6 +123,7 @@ export default function Landing() {
           any economy. As a digital representation of the Saudi Riyal, it aims
           to streamline financial transactions, enhance financial inclusion, and
           foster innovation within the kingdom.
+      <p className='text-3xl text-white mb-3 mt-16'>Roadmap</p>
         </p>
       </div>
     </div>
