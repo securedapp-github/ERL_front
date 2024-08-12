@@ -1,6 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../Asserts/SecureDapp.png";
+import Logo from "../Asserts/Logo.png";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
+import { BsTwitterX } from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,46 +19,50 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-transparent relative">
+    <nav className="bg-[#021317] relative px-6 py-8">
       <div className="  px-4 sm:px-6 lg:px-8  w-full">
-        <div className="flex items-center justify-between h-16  w-full">
+        <div className="flex items-center justify-between h-16  w-full ">
           <div className="flex items-center justify-between w-full">
-            <div className="flex-shrink-0 text-white">
+            <div className="flex-shrink-0 text-white md:ml-16 ">
               <img src={Logo} alt="SecureDapp logo" className="h-16" />
             </div>
+
+            <div className="hidden md:flex gap-3 justify-center items-center flex-wrap ">
+              <p className="text-white">About Us</p>
+              <div className="w-[2px] h-4 bg-white"></div>
+              <p className="text-white">Contact Us</p>
+              <div className="w-[2px] h-4 bg-white"></div>
+              <p className="text-white">Lite Paper</p>
+            </div>
+
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  to="/"
-                  onClick={closeMenu}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal"
-                >
-                  SecureWatch
-                </Link>
-                <Link
-                  to="/"
-                  onClick={closeMenu}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal"
-                >
-                  Solidity Shield Scan
-                </Link>
-                <Link
-                  to="/"
-                  onClick={closeMenu}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal"
-                >
-                  SecurePAD
-                </Link>
-                <Link
-                  to="/"
-                  onClick={closeMenu}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal"
-                >
-                  About Us
-                </Link>
+                <div className="flex gap-7">
+                  <a href="#">
+                    <div className="border bottom-2 border-white p-2 rounded-full">
+                      <PiTelegramLogoDuotone className="text-white text-xl" />
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div className="border bottom-2 border-white p-2 rounded-full">
+                      <BsTwitterX className="text-white text-lg" />
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div className="border bottom-2 border-white p-2 rounded-full">
+                      <FaDiscord className="text-white text-xl" />
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div className="border bottom-2 border-white p-2 rounded-full">
+                      <FaFacebookF className="text-white text-xl" />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
           <div className="-mr-2 flex md:hidden">
             <button
               ref={buttonRef}
@@ -83,7 +91,7 @@ const Navbar = () => {
       {/* Popover-like menu */}
       {isMenuOpen && (
         <div
-          className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg py-2 px-3"
+          className="absolute right-0 mt-2 bg-black border border-gray-300 rounded-md shadow-lg py-2 px-3"
           style={{
             top: buttonRef.current.offsetTop + buttonRef.current.offsetHeight,
           }}
@@ -91,34 +99,51 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={closeMenu}
-            className="text-gray-800 block px-4 py-2 font-medium text-sm hover:bg-gray-200"
+            className="text-white block px-4 py-2 font-medium text-sm hover:bg-gray-200"
           >
-            SecureWatch
+            About Us
           </Link>
           <Link
             to="/about"
             onClick={closeMenu}
-            className="text-gray-800 block px-4 py-2 font-medium text-sm hover:bg-gray-200"
+            className="text-white block px-4 py-2 font-medium text-sm hover:bg-gray-200"
           >
-            Solidity Shield Scan
+            Contact Us
           </Link>
           <Link
             to="/contact"
             onClick={closeMenu}
-            className="text-gray-800 block px-4 py-2 font-medium text-sm hover:bg-gray-200"
+            className="text-white block px-4 py-2 font-medium text-sm hover:bg-gray-200"
           >
-            SecurePAD
+            Lite Paper
           </Link>
-          <Link
-            to="/contact"
-            onClick={closeMenu}
-            className="text-gray-800 block px-4 py-2 font-medium text-sm hover:bg-gray-200"
-          >
-            About Us
-          </Link>
+
+          <div className=" flex items-baseline space-x-4 mt-4">
+            <div className="flex gap-7">
+              <a href="#">
+                <div className="border bottom-2 border-white p-2 rounded-full">
+                  <PiTelegramLogoDuotone className="text-white text-xl" />
+                </div>
+              </a>
+              <a href="#">
+                <div className="border bottom-2 border-white p-2 rounded-full">
+                  <BsTwitterX className="text-white text-lg" />
+                </div>
+              </a>
+              <a href="#">
+                <div className="border bottom-2 border-white p-2 rounded-full">
+                  <FaDiscord className="text-white text-xl" />
+                </div>
+              </a>
+              <a href="#">
+                <div className="border bottom-2 border-white p-2 rounded-full">
+                  <FaFacebookF className="text-white text-xl" />
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       )}
-      <div className="bg-zinc-700 w-full h-[1.5px] mt-1"></div>
     </nav>
   );
 };
